@@ -1,8 +1,6 @@
 import sha1 from 'sha1';
 import dbClient from '../utils/db';
 
-const userQueue = new Queue('email sending');
-
 export default class UsersController {
   static async postNew(req, res) {
     const email = req.body ? req.body.email : null;
